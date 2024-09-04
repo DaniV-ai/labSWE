@@ -1,27 +1,47 @@
 ﻿using System;
 
 
-// Single Responsibility principle
+
 namespace lab3{
     public static class lab3{
         static int Main(){
             
             Car car = new Car();
-            car.drive();
-
 
             PassengerCar passengerCar = new PassengerCar();
             Lorry lorry = new Lorry();
             ArmoredTruck armoredTruck = new ArmoredTruck();
 
+            /*
+            car.drive();
             passengerCar.drive();
             lorry.drive();
             armoredTruck.drive();
+            */
+            /////////////////////////////////////////////////////
+
+            Bird bird = new Bird();
+            Duck duck = new Duck();
+            Seagull seagull = new Seagull();
+
+
+            bird.fly();
+
+            duck.fly();
+            duck.swim();
+
+            seagull.fly();
+            seagull.swim();
+
 
             return 0;
         }
     }
+
+    // Single Responsibility principle
+
     // bad implementation
+    
     public class Car {
         public void drive(){
             Console.Write("I carry people\n");
@@ -49,4 +69,37 @@ namespace lab3{
             Console.Write("I carry money\n");
         }
     }
+
+
+
+    // Liskov substitution principle
+
+
+
+    public class Bird(){
+        public void fly(){
+            Console.Write("*flies*\n");
+        }
+    }
+
+    // bad implementation
+
+    public class Duck(){
+        public void fly(){
+            Console.Write("*flies*\n");
+        }
+        public void swim(){
+            Console.Write("*swims*\n");
+        }
+    }
+
+    // good implementation
+
+    public class Seagull() : Duck{
+        public void swim() {
+            Console.Write("*swims*\n");
+        }
+    }
+
+
 }
