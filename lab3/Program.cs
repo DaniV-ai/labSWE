@@ -12,12 +12,13 @@ namespace lab3{
             Lorry lorry = new Lorry();
             ArmoredTruck armoredTruck = new ArmoredTruck();
 
-            /*
+ /*           
             car.drive();
+            Console.WriteLine("=======================");
             passengerCar.drive();
             lorry.drive();
             armoredTruck.drive();
-            */
+     */       
             /////////////////////////////////////////////////////
 
             Bird bird = new Bird();
@@ -27,8 +28,12 @@ namespace lab3{
 
             bird.fly();
 
+            Console.WriteLine("=======================");
+
             duck.fly();
             duck.swim();
+
+            Console.WriteLine("=======================");
 
             seagull.fly();
             seagull.swim();
@@ -100,6 +105,5 @@ namespace lab3{
             Console.Write("*swims*\n");
         }
     }
-
 
 }
